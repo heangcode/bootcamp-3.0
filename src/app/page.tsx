@@ -1,4 +1,4 @@
-import { Button, Typography } from "@/components";
+import { Button, InputSearch, Typography } from "@/components";
 import React from "react";
 
 const Homepages = () => {
@@ -12,6 +12,7 @@ const Homepages = () => {
       >
         សួស្ដីប្រូ !
       </Typography>
+      <InputSearch />
     </div>
   );
 };
