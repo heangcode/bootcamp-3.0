@@ -1,9 +1,10 @@
-import { Button, InputSearch, Typography } from "@/components";
+import { Button, ButtonIcon, InputSearch, Typography } from "@/components";
 import React from "react";
+import { HiOutlineUser } from "react-icons/hi2";
 
 const Homepages = () => {
   return (
-    <div>
+    <div className="flex items-center justify-center mx-auto">
       <Typography
         align="justify"
         variant="bold"
@@ -13,6 +14,25 @@ const Homepages = () => {
         សួស្ដីប្រូ !
       </Typography>
       <InputSearch />
+      <ButtonIcon
+        icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+            />
+          </svg>
+        }
+      />
+      <ButtonIcon icon={<HiOutlineUser className="w-6 h-6" />} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ const InputSearch = () => {
   return (
     <div className="relative w-[325px]">
       <input
-        className="text-black border border-[#828282] w-full h-[50px] pl-[20px] pr-[10px] py-[15px] rounded-full pr-10"
+        className="text-black border border-[#828282] w-full h-[50px] pl-[20px] pr-[10px] py-[15px] rounded-full"
         type="text"
         placeholder="Search"
       />
