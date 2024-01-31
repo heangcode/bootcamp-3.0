@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 
 interface TypographyProps {
   children: ReactNode;
@@ -8,62 +8,20 @@ interface TypographyProps {
   variant?: "normal" | "semibold" | "bold";
 }
 
-const Typography: React.FC<TypographyProps> = ({
+const Typography: FC<TypographyProps> = ({
   children,
-  className,
+  className = "",
   align = "center",
   fontSize = "base",
   variant = "normal",
 }) => {
-  const typographyAlign = (align: string) => {
-    switch (align) {
-      case "left":
-        return "text-left";
-      case "center":
-        return "text-center";
-      case "right":
-        return "text-right";
-      case "justify":
-        return "text-justify";
-      default:
-        "text-center";
-    }
-  };
-
-  const typographyFontSize = (fontSize: string) => {
-    switch (fontSize) {
-      case "base":
-        return "text-base";
-      case "sm":
-        return "text-sm";
-      case "md":
-        return "text-md";
-      case "lg":
-        return "text-lg";
-      default:
-        return "text-base";
-    }
-  };
-  const typographyVariant = (variant: string) => {
-    switch (variant) {
-      case "normal":
-        return "font-normal";
-      case "bold":
-        return "font-bold";
-      case "semibold":
-        return "font-semibold";
-      default:
-        return "font-normal";
-    }
-  };
-
-  const typographyAlignStyles = typographyAlign(align);
-  const typographyFontSizeStyles = typographyFontSize(fontSize);
-  const typographyVariantStyles = typographyVariant(variant);
+  const alignClass = `text-${align}`;
+  const fontSizeClass = `text-${fontSize}`;
+  const variantClass = `font-${variant}`;
 
   return (
     <p
-      className={`${typographyVariantStyles} ${typographyFontSizeStyles} ${typographyAlignStyles} ${className}`}
+      className={`${alignClass} ${fontSizeClass} ${variantClass} ${className}`}
     >
       {children}
     </p>

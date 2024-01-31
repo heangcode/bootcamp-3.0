@@ -1,12 +1,20 @@
 import React from "react";
 
-const InputSearch = () => {
+interface InputSearchProps {
+  placeholder?: string;
+  className?: string;
+}
+
+const InputSearch: React.FC<InputSearchProps> = ({
+  placeholder,
+  className = "",
+}) => {
   return (
-    <div className="relative w-[325px]">
+    <div className={`relative ${className}`}>
       <input
         className="text-black border border-[#828282] w-full h-[50px] pl-[20px] pr-[10px] py-[15px] rounded-full"
         type="text"
-        placeholder="Search"
+        placeholder={placeholder}
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
