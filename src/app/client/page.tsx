@@ -1,11 +1,6 @@
-import ClientComponent from "@/components/atoms/client/ClientComponent";
 
 const ClientPage = () => {
-  return (
-    <div>
-      <ClientComponent />
-    </div>
-  );
+  return <div>Client Components</div>;
 };
 
 export default ClientPage;
